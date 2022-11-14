@@ -1,0 +1,16 @@
+#mainContainer{
+    /* background-color: blue; */
+    box-sizing: border-box;
+    height: 500px;
+    width: 500px;
+    border: 10px double black;
+    border-radius: 50px;
+    text-align: center;
+}
+#topHeader{
+    margin: 0px;
+    padding: 0px;
+}
+#secondHeader{
+    margin-top: 50px;
+}
