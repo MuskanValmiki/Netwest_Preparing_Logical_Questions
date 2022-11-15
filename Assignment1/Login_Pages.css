@@ -1,0 +1,84 @@
+#mainContainer{
+    height: 800px;
+    width: 600px;
+    position: relative;
+    bottom: -70px;
+    border: 1px solid black;
+    right: 320px;
+}
+
+#manage-text{
+    margin-top: 180px;
+}
+
+#mainContainer2{
+    height: 800px;
+    width: 600px;
+    position: relative;
+    bottom: 733px;
+    left: 280px;
+    border: 1px solid black;
+    background-color: green;
+}
+
+#text{
+    position: relative;
+    top: 250px;
+}
+
+#button{
+    width: 100px;
+    height: 40px;
+}
+
+h6{
+    display: flex;
+    flex-direction: row;
+    color: gray; 
+} 
+
+h6:before,
+h6:after{
+    content:"";
+    flex: 1 1;
+    border-bottom: 1px solid grey;
+    margin: auto;
+
+}
+#Email{
+    width: 250px;
+    height: 30px;
+}
+
+#Password{
+    margin-top: 30px;
+    width: 250px;
+    height: 30px;
+}
+
+#signin{
+    width: 120px;
+    height: 38px;
+    margin-top: 30px;
+}
+#fabimage{
+    height: 70px;
+    width: 100px;
+    position: relative;
+    right: 10px;
+}
+
+#gitimage{
+    height: 70px;
+    width: 100px;
+    position: relative;
+    right: 5px;
+}
+
+#googleimg{
+    height: 90px;
+    width: 100px;
+    position: relative;
+    bottom: -10px;
+    right: 1px;
+}
