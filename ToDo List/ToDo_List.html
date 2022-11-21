@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <style>
+        button{
+            text-align: center;
+            border: 2px solid blue;
+            display: inline-block;
+            cursor: pointer;
+            background-color: yellow;
+        }
+        #box{
+            margin-top: 5%;
+        }
+    </style>
+</head>
+<body>
+    <h2>To Do List-</h2>
+    <input type="text" id="List">
+    <button id="Submit">Submit</button>
+    <div id="Box"></div>
+</body>
+<script>
+    const inputBox=document.querySelector("#List")
+    const Btn=document.querySelector("#Submit")
+    const box=document.querySelector("#Box")
+
+    let Data=[];
+    function displayData(){
+        box.innerHTML="";
+        Data.map((item,index)=>{
+        box.innerHTML+=`
+        <table>
+        <tr>
+        <td><h3>${item.ID}</h3></td>
+        <td><button onclick="editList(${index})">Edit </button></td>
+        <td><button onclick="deleteList(${index})">Delete </button></td>
+        </tr>
+        </table>
+        `
+    })
+    }
+    function deleteList(index){
+    Data.splice(index,1);
+    displayData()
+    }
+    function editList(index){
+   let editedText =  prompt("Enter something")
+   Data[index].ID =editedText
+   displayData()
+    }
+    function addList(){
+        Data = [...Data,
+        {
+            "ID": inputBox.value
+        }
+    ];
+        console.log(Data)
+        displayData()
+    }
+
+
+    Btn.addEventListener('click',addList)
+    displayData()
+
+</script>
+</html>

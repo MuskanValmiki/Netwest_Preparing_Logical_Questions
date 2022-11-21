@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>How to convert string to camel case in JavaScript ?</title>
+</head>
+<body style="text-align:center;">
+	<h1 style="color:blue">Convert into camel case.</h1>
+    <input type="text" id="sentence">
+	<button id="button">click here</button>
+    <div id="container"></div>
+	<script>
+        const sentence=document.querySelector("#sentence");
+        const submitBtn=document.querySelector("#button");
+        const container=document.querySelector("#container");
+        
+        const convert=()=>{
+            container.innerHtml=""
+            let result=sentence.value.toLowerCase();
+            var new_string=""
+            for (var i=0;i<result.length;i++){
+                if (result[i]==" "){
+                    new_string+=result[i+1].toUpperCase()
+                    i+=1
+                }
+                else{
+                    new_string+=result[i]
+                }
+             }
+            alert(new_string)
+            container.innerHtml+=`<h1>${new_string}</h1>`
+        }
+        submitBtn.addEventListener("click",convert)
+	</script>
+</body>
+</html>				
