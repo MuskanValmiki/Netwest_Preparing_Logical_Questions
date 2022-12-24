@@ -7,20 +7,7 @@
     <title>Table</title>
 </head>
 <body>
-    <h1>Here which number we gave that table should come.</h1>
-    <input type="number" class="input">
-    <button class="button" onclick="table()">Click</button>
-    <div id="container"></div>
-    <script>
-        function table(){
-            const number=document.querySelector('.input');
-            const container=document.querySelector("#container");
-            container.innerHTML=""
-            for(let i = 1; i <= 10; i++) {
-                const result = i * number.value;
-                container.innerHTML+=`<div>${number.value} * ${i} = ${result}</div>`
-            }
-        }
-    </script>
+    <div class="container"></div>
 </body>
+<script src="table.js"></script>
 </html>
